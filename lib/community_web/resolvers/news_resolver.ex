@@ -13,4 +13,8 @@ defmodule CommunityWeb.NewsResolver do
       ok -> ok
     end
   end
+
+  def get_link(_root, %{id: id}, _info) do
+    {:ok, News.get_link!(id)}
+  end
 end
